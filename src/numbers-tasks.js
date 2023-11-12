@@ -181,8 +181,8 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
- function roundToPowerOfTen(num, pow) {
-  const res = Math.round(num / (10 ** pow)) * 10 ** pow;
+function roundToPowerOfTen(num, pow) {
+  const res = Math.round(num / 10 ** pow) * 10 ** pow;
   return res;
 }
 
@@ -203,7 +203,7 @@ function getParallelepipedDiagonal(a, b, c) {
  *   16 => false
  *   17 => true
  */
- function isPrime(num) {
+function isPrime(num) {
   if (num < 2) {
     return false;
   }
@@ -230,7 +230,7 @@ function getParallelepipedDiagonal(a, b, c) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
- function toNumber(value, def) {
+function toNumber(value, def) {
   const convertedValue = Number(value);
   // eslint-disable-next-line no-restricted-globals
   return isNaN(convertedValue) ? def : convertedValue;
