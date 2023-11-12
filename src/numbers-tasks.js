@@ -18,8 +18,8 @@
  *   5, 10 => 50
  *   5, 5  => 25
  */
-function getRectangleArea(/* width, height */) {
-  throw new Error('Not implemented');
+function getRectangleArea(width, height) {
+  return width * height;
 }
 
 /**
@@ -50,7 +50,7 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return Math.floor((value1 + value2) / 2);
+  return value1 / 2 + value2 / 2;
 }
 
 /**
@@ -247,8 +247,8 @@ function toNumber(value, def) {
  *   -2 => -8
  *   0  => 0
  */
-function getCube(/* num */) {
-  throw new Error('Not implemented');
+function getCube(num) {
+  return num ** 3;
 }
 
 /**
