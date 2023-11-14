@@ -127,9 +127,8 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     5     => 5
  *     0     => 0
  */
-function getLastDigit(value) {
-  const x = value.toString().slice(-1);
-  return parseInt(x, 10);
+function getLastDigit(/* value */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -476,9 +475,8 @@ function isInteger(number) {
  * 'abcdefgh'      => NaN
  *
  */
-function getFloatOnString(str) {
-  const match = str.match(/[-+]?[0-9]*\.?[0-9]+/);
-  return match ? parseFloat(match[0]) : NaN;
+function getFloatOnString(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -495,9 +493,8 @@ function getFloatOnString(str) {
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
-function getIntegerOnString(str, base) {
-  const result = parseInt(str, base);
-  return Number.isNaN(result) ? NaN : result;
+function getIntegerOnString(/* str, base */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -585,8 +582,8 @@ function getIntegerPartNumber(number) {
  * 1, 2, 3       => 6
  * 0.1, 0.2, 0.3 => 0.6
  */
-function getSumOfNumbers(x1, x2, x3) {
-  return x1 + x2 + x3;
+function getSumOfNumbers(/* x1, x2, x3 */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -601,8 +598,8 @@ function getSumOfNumbers(x1, x2, x3) {
  * -5, -6 => -5
  * 0, 5   => 5
  */
-function getMaxNumber(firstNumber, secondNumber) {
-  return firstNumber > secondNumber ? firstNumber : secondNumber;
+function getMaxNumber(/* firstNumber, secondNumber */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -631,8 +628,8 @@ function getRandomInteger(min, max) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(a, b) {
-  return Math.sqrt(a * a + b * b);
+function getHypotenuse(/* a, b */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -648,17 +645,11 @@ function getHypotenuse(a, b) {
  * 10 => 5
  * 15 => 8
  */
-function getCountOfOddNumbers(number) {
-  let count = 0;
-  for (let i = 0; i <= number; i += 1) {
-    if (i % 2 !== 0) {
-      count += 1;
-    }
-  }
-  return count;
+function getCountOfOddNumbers(/* number */) {
+  throw new Error('Not implemented');
 }
 
-export default {
+module.exports = {
   getRectangleArea,
   getCircleCircumference,
   getAverage,
