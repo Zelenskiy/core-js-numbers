@@ -658,7 +658,7 @@ function getCountOfOddNumbers(number) {
   return count;
 }
 
-module.exports = {
+export default {
   getRectangleArea,
   getCircleCircumference,
   getAverage,
