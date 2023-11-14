@@ -6,7 +6,6 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math     *
  *                                                                                           *
  ******************************************************************************************* */
-
 /**
  * Returns an area of a rectangle given by width and height.
  *
@@ -21,7 +20,6 @@
 function getRectangleArea(width, height) {
   return width * height;
 }
-
 /**
  * Returns a circumference of circle given by radius.
  *
@@ -36,7 +34,6 @@ function getRectangleArea(width, height) {
 function getCircleCircumference(radius) {
   return 2 * Math.PI * radius;
 }
-
 /**
  * Returns an average of two given numbers.
  *
@@ -52,7 +49,6 @@ function getCircleCircumference(radius) {
 function getAverage(value1, value2) {
   return value1 / 2 + value2 / 2;
 }
-
 /**
  * Returns a distance between two points by cartesian coordinates.
  *
@@ -71,7 +67,6 @@ function getAverage(value1, value2) {
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
   return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
 }
-
 /**
  * Returns a root of linear equation a*x + b = 0 given by coefficients a and b.
  *
@@ -87,7 +82,6 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
 function getLinearEquationRoot(a, b) {
   return -b / a;
 }
-
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
  * coordinates in Cartesian plane.
@@ -113,7 +107,6 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
   const angle = Math.acos(cos);
   return angle;
 }
-
 /**
  * Returns a last digit of a integer number.
  * The input parameter will always be greater than or equal to zero and will be in decimal notation.
@@ -130,7 +123,6 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
 function getLastDigit(/* value */) {
   throw new Error('Not implemented');
 }
-
 /**
  * Returns a number by given string representation.
  *
@@ -145,7 +137,6 @@ function getLastDigit(/* value */) {
 function parseNumberFromString(value) {
   return parseFloat(value, 10);
 }
-
 /**
  * Returns a diagonal length of the rectangular parallelepiped given by its sides a,b,c.
  *
@@ -162,7 +153,6 @@ function parseNumberFromString(value) {
 function getParallelepipedDiagonal(a, b, c) {
   return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
-
 /**
  * Returns the number rounded to specified power of 10.
  *
@@ -184,7 +174,6 @@ function roundToPowerOfTen(num, pow) {
   const res = Math.round(num / 10 ** pow) * 10 ** pow;
   return res;
 }
-
 /**
  * Returns true is the number is prime; otherwise false.
  * See: https://en.wikipedia.org/wiki/Primality_test
@@ -213,7 +202,6 @@ function isPrime(num) {
   }
   return true;
 }
-
 /**
  * Tries to convert value to number and returns it if conversion was successful;
  * otherwise returns default value passed as a second argument.
@@ -234,7 +222,6 @@ function toNumber(value, def) {
   // eslint-disable-next-line no-restricted-globals
   return isNaN(convertedValue) ? def : convertedValue;
 }
-
 /**
  * Returns the cube of the given number.
  *
@@ -249,7 +236,6 @@ function toNumber(value, def) {
 function getCube(num) {
   return num ** 3;
 }
-
 /**
  * Returns the Fibonacci number located at the index position.
  *
@@ -280,7 +266,6 @@ function getFibonacciNumber(index) {
   }
   return c;
 }
-
 /**
  * Returns the sum of all numbers from 1 to n.
  *
@@ -299,7 +284,6 @@ function getSumToN(n) {
   }
   return s;
 }
-
 /**
  * Returns the sum of the digits of a given number.
  *
@@ -319,7 +303,6 @@ function getSumOfDigits(num) {
   }
   return sum;
 }
-
 /**
  * Returns true if the given number is a power of two, false otherwise.
  *
@@ -337,7 +320,6 @@ function isPowerOfTwo(num) {
   }
   return Math.log2(num) % 1 === 0;
 }
-
 /**
  * Returns the sine of a number.
  *
@@ -351,7 +333,6 @@ function isPowerOfTwo(num) {
 function getSine(num) {
   return Math.sin(num);
 }
-
 /**
  * Returns a string representation of a number in a specified base (radix).
  *
@@ -366,7 +347,6 @@ function getSine(num) {
 function numberToStringInBase(number, base) {
   return number.toString(base);
 }
-
 /**
  * Returns a string representation of a number in exponential notation.
  *
@@ -380,7 +360,6 @@ function numberToStringInBase(number, base) {
 function toExponential(number, fractionDigits) {
   return number.toExponential(fractionDigits);
 }
-
 /**
  * Returns a string representation of a number in fixed-point notation.
  *
@@ -395,7 +374,6 @@ function toExponential(number, fractionDigits) {
 function toFixed(number, fractionDigits) {
   return number.toFixed(fractionDigits);
 }
-
 /**
  * Returns a string representation of a number in normal (fixed-point or exponential)
  * notation rounded to precision significant digits.
@@ -411,7 +389,6 @@ function toFixed(number, fractionDigits) {
 function toPrecision(number, precision) {
   return number.toPrecision(precision);
 }
-
 /**
  * Returns the primitive value of a Number object.
  *
@@ -425,7 +402,6 @@ function toPrecision(number, precision) {
 function getNumberValue(number) {
   return number.valueOf();
 }
-
 /**
  * Returns a boolean value indicating whether the parameter is a number or not.
  *
@@ -448,7 +424,6 @@ function isNumber(number) {
     !Number.isNaN(number)
   );
 }
-
 /**
  * Returns a boolean value indicating whether a number is an integer or not.
  *
@@ -463,7 +438,6 @@ function isNumber(number) {
 function isInteger(number) {
   return Number.isInteger(number);
 }
-
 /**
  * Returns a floating point number or, if the number cannot be parsed from the argument, returns NaN.
  *
@@ -478,7 +452,6 @@ function isInteger(number) {
 function getFloatOnString(/* str */) {
   throw new Error('Not implemented');
 }
-
 /**
  * Returns an integer of the specified base or, if the number cannot be parsed
  * from the argument, returns NaN.
@@ -496,7 +469,6 @@ function getFloatOnString(/* str */) {
 function getIntegerOnString(/* str, base */) {
   throw new Error('Not implemented');
 }
-
 /**
  * Returns whether a number is a safe integer.
  *
@@ -511,7 +483,6 @@ function getIntegerOnString(/* str, base */) {
 function isSafeInteger(number) {
   return Number.isSafeInteger(number);
 }
-
 /**
  * Returns the smallest integer less than or equal to a given number.
  *
@@ -525,7 +496,6 @@ function isSafeInteger(number) {
 function roundToSmallestInteger(number) {
   return Math.floor(number);
 }
-
 /**
  * Returns the largest integer greater than or equal to a given number.
  *
@@ -539,7 +509,6 @@ function roundToSmallestInteger(number) {
 function roundToLargestInteger(number) {
   return Math.ceil(number);
 }
-
 /**
  * Returns the value of a number rounded to the nearest integer.
  *
@@ -554,7 +523,6 @@ function roundToLargestInteger(number) {
 function roundToNearestInteger(number) {
   return Math.round(number);
 }
-
 /**
  * Returns the integer part of a number by removing any fractional digits.
  *
@@ -569,7 +537,6 @@ function roundToNearestInteger(number) {
 function getIntegerPartNumber(number) {
   return Math.trunc(number);
 }
-
 /**
  * Returns the sum of numbers.
  *
@@ -585,7 +552,6 @@ function getIntegerPartNumber(number) {
 function getSumOfNumbers(/* x1, x2, x3 */) {
   throw new Error('Not implemented');
 }
-
 /**
  * Returns the largest number.
  *
@@ -601,7 +567,6 @@ function getSumOfNumbers(/* x1, x2, x3 */) {
 function getMaxNumber(/* firstNumber, secondNumber */) {
   throw new Error('Not implemented');
 }
-
 /**
  * Returns a random integer in the range from min to max.
  *
@@ -617,7 +582,6 @@ function getMaxNumber(/* firstNumber, secondNumber */) {
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 /**
  * Returns the length of the hypotenuse of a right triangle.
  *
@@ -631,7 +595,6 @@ function getRandomInteger(min, max) {
 function getHypotenuse(/* a, b */) {
   throw new Error('Not implemented');
 }
-
 /**
  * Returns count of odd numbers from zero to the resulting number.
  * The resulting number is taken into account.
@@ -648,7 +611,6 @@ function getHypotenuse(/* a, b */) {
 function getCountOfOddNumbers(/* number */) {
   throw new Error('Not implemented');
 }
-
 module.exports = {
   getRectangleArea,
   getCircleCircumference,
