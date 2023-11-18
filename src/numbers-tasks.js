@@ -121,8 +121,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  const x = value.toString().slice(-1);
-  return parseInt(x, 10);
+  return value % 10;
 }
 /**
  * Returns a number by given string representation.
@@ -451,8 +450,10 @@ function isInteger(number) {
  *
  */
 function getFloatOnString(str) {
-  const match = str.match(/[-+]?[0-9]*\.?[0-9]+/);
-  return match ? parseFloat(match[0]) : NaN;
+  if (Number.isNaN(Number.parseFloat(str))) {
+    return NaN;
+  }
+  return parseFloat(Number.parseFloat(str));
 }
 /**
  * Returns an integer of the specified base or, if the number cannot be parsed
@@ -469,8 +470,10 @@ function getFloatOnString(str) {
  * '10', 8              => 8
  */
 function getIntegerOnString(str, base) {
-  const result = parseInt(str, base);
-  return Number.isNaN(result) ? NaN : result;
+  if (Number.isNaN(Number.parseInt(str, base))) {
+    return NaN;
+  }
+  return parseFloat(Number.parseInt(str, base));
 }
 /**
  * Returns whether a number is a safe integer.
@@ -553,7 +556,8 @@ function getIntegerPartNumber(number) {
  * 0.1, 0.2, 0.3 => 0.6
  */
 function getSumOfNumbers(x1, x2, x3) {
-  return x1 + x2 + x3;
+  const result = x1 + x2 + x3;
+  return Number(result.toFixed(10));
 }
 /**
  * Returns the largest number.
@@ -568,7 +572,7 @@ function getSumOfNumbers(x1, x2, x3) {
  * 0, 5   => 5
  */
 function getMaxNumber(firstNumber, secondNumber) {
-  return firstNumber > secondNumber ? firstNumber : secondNumber;
+  return Math.max(firstNumber, secondNumber);
 }
 /**
  * Returns a random integer in the range from min to max.
@@ -596,7 +600,10 @@ function getRandomInteger(min, max) {
  * 3, 4 => 5
  */
 function getHypotenuse(a, b) {
-  return Math.sqrt(a * a + b * b);
+  if (a <= 0 || b <= 0) {
+    throw new Error('Invalid input: sides must be positive numbers.');
+  }
+  return Math.sqrt(a ** 2 + b ** 2).toPrecision(14);
 }
 /**
  * Returns count of odd numbers from zero to the resulting number.
@@ -613,7 +620,8 @@ function getHypotenuse(a, b) {
  */
 function getCountOfOddNumbers(number) {
   let count = 0;
-  for (let i = 0; i <= number; i += 1) {
+  const numb = Math.abs(number);
+  for (let i = 0; i <= numb; i += 1) {
     if (i % 2 !== 0) {
       count += 1;
     }
