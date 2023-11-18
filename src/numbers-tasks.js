@@ -603,7 +603,7 @@ function getHypotenuse(a, b) {
   if (a === Number.MAX_VALUE || b === Number.MAX_VALUE) {
     return Number.MAX_VALUE;
   }
-  return Math.sqrt(a ** 2 + b ** 2);
+  return Math.hypot(a, b);
 }
 /**
  * Returns count of odd numbers from zero to the resulting number.
